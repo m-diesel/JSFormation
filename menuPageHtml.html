@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* caractéristiques des objets présents dans le corps*/
+        body{
+            /* les propriétés ci-dessous s'appliquent au corps de la pae je définis la marge de gauche*/
+            margin-left: 10px;
+            /* je définis la marge du haut */
+            margin-top: 50px;
+            /* jedéfinis la taille et la fonte et la famille au cas où la police n'existerait pas */
+            font: 18px Verdana, sans-serif;
+        }
+        /* caractérisitques des éléments du menu */
+        .menu{
+            /* je dus qu'il n'y a aucune puce dans la liste */
+            list-style-type: none;
+        }
+        /* caractéristiques des éléments de la liste */
+        .menu li{
+            /* je déclare un menu flottant qui se positionne à gauche et dont les options sont verticales */
+            float: none;
+        }
+        /* caractéritiques des éléments d'ancre (anchor) */
+        .menu a{
+            /* largeur de l'option du menu */
+            width: 200px;
+            /* hauteur de l'option du menu */
+            height: 30px;
+            /* j'affiche par block */
+            display: block;
+            /* je centre le texte */
+            text-align: center;
+            /* je place une bordure*/
+            border: 1px solid gray;
+            /* texte simple. pas de soulignment, de caractères barrés, etc. */
+            text-decoration: none;
+            /* couleur rouge pour le texte */
+            color:red;
+             /* couleur bleu ciel pour le fond */
+             background-color: azure;
+        }
+        /* caractéritiques de l'élément a lorsque je le survole */
+        .menu a :hover{
+            /* si je survole l'option, son fond se met en jaune */
+            background: yellow;
+            /* si je survole l'option, sa bordure se met en noir */
+            border: 1px solid black;
+        }
+        /* caractérisitques de l'élément a lorsque je l'ai cliqué */
+        .menu a:active{
+            /*quand je clique sur l'option, son fond se met en bleu */
+            background: blue;
+            /* quand je clique sur l'option, son fond se met en bleu */            
+        }
+    </style>
+    <title>Document</title>
+</head>
+<!-- début du corps de la page -->
+<h2>Choisissez une année parmi ces options</h2>
+<!--début des éléments du menu-->
+<ul class="menu">
+    <li><a href="prog1.html">Année 2022</a></li>
+    <li><a href="prog2.html">Année 2021</a></li>
+    <li><a href="prog3.html">Année 2020</a></li>
+</ul>
+<body>
+    
+</body>
+</html>

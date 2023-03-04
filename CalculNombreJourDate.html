@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /*présentation des champs input */
+        input{
+            /* position fixe absolue*/
+            position: absolue;
+            left: 240px;
+            /*famille de police */
+            font-family: sans-serif;
+            /* taille du caractère */
+            font-size: 12px;
+            width: 160px;
+        }
+        /* présentation des intitulés label */
+        label{
+            /*position gauche*/
+            left: 4px;
+            /* famille de police*/
+            font-family: sans-serif;
+            /*taille du caractère*/
+            font-size: 12px;
+        }
+        /*présentation du bouton*/
+        input[type=buton]{
+            position: absolute;
+            /*position gauche*/
+            top: 130px;
+            left: 10px;
+            font-size: 12px;
+        }
+        /*fin des styles*/
+    </style>
+    <!--début du script-->
+    <script>
+        function calcul(MF){
+            /*je récupère la valueur de la date de facture dans une variable*/
+            var d1 = document.MF.dateF.value;
+            /*je trasforme la chaine d1 en date*/
+            var Td1 = new Date(d1);
+            /*je calcule la date en millisecondes*/
+            md1 = Td1.getTime();
+            /*je récupère la valeur de la date de réglement*/
+            var d2 = document.MF.dateR.value;
+            /*je transforme la chaine d2 en date */
+            var Td2 = new Date(d2);
+            /*je calcule la date en millisecondes*/
+            md2 = Td2.getTime();
+            /*je fais la différence des millisecondes*/
+            var diff = md2 - md1;
+            /*je retransforme les millisencondes en nombre de jours*/
+            var resultat = diff/(1000*3600*24);
+            /*je place le résutat dans la 3ème zone*/
+            document.MF.nbr.value=resultat;
+             
+        }
+        <!--fin du script-->
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h5>Calcul du nombre de jours entre deux dates</h5>
+    <form action="" name="MF">
+        <label>Entrez la date de facture : </label>
+        <input type="date" name="dateF"><br>
+        <label>Entrez la date de règlement :</label>
+        <input type="date" name="dateR"><br>
+        <label>Nombre de jours entre les deux dates:</label>
+        <input type="text" name="nbr"><br><br>
+        <!--si je clique sur le bouton, alors je déclenche la fonction calul-->
+        <input type="button" value="Calculer" OnClick="calcul(MF)">
+    </form>
+</body>
+</html>
