@@ -7,21 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="c1" placeholder="entrez le 1er mot"><br><br>
-    <input type="text" id="c2" placeholder="entrez le 2è mot"><br><br>
-    <input type="button" onclick="test()" value="concatenation">
-    <p id="resultat">Le résultat est : </p>
     <script>
-        function test(){
-            //je réupère la valeur de la 1ère zone input
-            var r1 = document.getElementById("c1").value;
-            //je réupère la valeur de la 2è zone input
-            var r2 = document.getElementById("c2").value;
-            //je concatène
-            var r3 = r1+r2;
-            // je selectionne le texte et j'ajoute à la suite l'opérateur +=
-            document.querySelector("p").textContent+=r3;
-        }
+    var a1 = "jean";
+    var a2 = "aipasmarre";
+    var a3 = a1+"\n"+a2+"\n"+"dejavascript";
+    alert(a3);
     </script>
 </body>
 </html>
