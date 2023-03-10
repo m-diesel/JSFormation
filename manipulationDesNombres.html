@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+
+            Auteur : Magne MATANGOU
+            Date :  10/03/2023
+            Cour: manipulation des nombres.
+        */
+        /*
+            il faut faire attention aux nombres dans javascript parce que rien n'est logique dans ce domaine. Ce n'est pas parce que vous écrivez un chiffre,
+            dans un champ qu'il sera considéré comme tel. Javascrit n'est pas très rigoureux parce qu'il a dû s'adapter historiquement aux différents navigateurs.
+            Les régulateurs du web(W3C et ECMA) font de leur mieux pour éviter les erreurs.
+
+            Précision et arrondi
+            Lorsqu'on manipule des nombres, il faut pouvoir gérer les décimales,
+            les arrondis et d'autres caractéritiques. Certaines méthodes peuvent vous aider
+            
+        */
+       // to fixed(): règle précisement le nombre de décimales. Le résultat est une chaine
+       var num = 3.14159;
+       alert(num.toFixed(2)); // renvoie 3.14
+       console.log(num.toFixed(3));
+       // toPrecision(): renvoie le nombre avec une précision correspondant aux chiffres après la virgule. C'est l'arrondi.Le résultat est une chaine.
+       var num = 3.14159;
+       alert(num.toPrecision(4)); // renvoie 3.142
+       console.log(num.toPrecision(4));
+    </script>
+</body>
+</html>
