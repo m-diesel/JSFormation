@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         /*
+
+            Auteur : Magne MATANGOU
+            Date :  10/03/2023
+            Cour: manipulation des textes.
+
+            Ces méthodes ne sont pas nombreuses et ressemblent à celles des autres langages de programmation.Il s'agit de :
+            1. chArt(chaine, position): renvoie le caractère situé à la position donnée en paramètre.
+            2. indexOf(sous chaine, position): renvoie la position d'une sous-chaine dans une chaine de caractères, en effectuant la recherche de gauche à droite, à partie de la position./
+            3.lastIndexOf(sous-chaine, position): la méthode est similaire à indexOf(), à la différence que la recherche se fait de droite à gauche.
+            4. substring(position1, position2): la méthode renvoie la sous chaine comprise entee les deux positions.
+            5. substr(positon, longueur): renvoie une sous-chaine commençant à une position sur une longueur définie.
+            6. toLowerCase(): convertit tous les caractères d'une chaine en minuscules.
+            7. toUpperCase(): convertit tous les caractères d'une chaine en majuscules.
+            8. concat(chaine1, chaine2, etc): concatène des chaines de caractères passées en paramètre.
+
+        */
+        //1. chArt(chaine, position): renvoie le caractère situé à la position donnée en paramètre.
+                var a = "Etude de javascript"
+                alert('charAt_1 :' +a.charAt(0)); // renvoie E
+                alert('charArt_2 :' +a.charAt(9)); // renvoie j
+        //2. indexOf(sous chaine, position): renvoie la position d'une sous-chaine dans une chaine de caractères, en effectuant la recherche de gauche à droite, à partie de la position./
+                var a ="etude de javascript";
+                alert('Indexof :' + a.indexOf("javascript",0)); //renvoie 9   
+        //3.lastIndexOf(sous-chaine, position): la méthode est similaire à indexOf(), à la différence que la recherche se fait de droite à gauche.
+                var a ="etude de javascript";
+                alert('lastIndexof :' + a.lastIndexOf("javascript",a.length)); //renvoie 9   
+        // 4. substring(position1, position2): la méthode renvoie la sous chaine comprise entee les deux positions.
+                var a ="etude de javascript";
+                alert('substring :' + a.substring(6,8)); //renvoie "de"   
+        // 5. substr(positon, longueur): renvoie une sous-chaine commençant à une position sur une longueur définie.
+                var a ="etude de javascript";
+                alert('substr :' + a.substr(9,4)); //renvoie "java"   
+        // 6. toLowerCase(): convertit tous les caractères d'une chaine en minuscules.
+                var a ="etude de javascript";
+                alert('toLowerCase :' + a.toLowerCase()); 
+        //  7. toUpperCase(): convertit tous les caractères d'une chaine en majuscules.
+                var a ="etude de javascript";
+                alert('toUpperCase :' + a.toUpperCase());   
+        // 8. concat(chaine1, chaine2, etc): concatène des chaines de caractères passées en paramètre.
+                var a = "paul";
+                var b = "ochon"
+                alert('concaténation de a et b :' + a.concat(b));
+        // 9. startsWith() et endsWidth(): permet de déterminer si une chaine de caractères commence par une certaine autre chaine
+                var a = "paul ochon";
+                alert('startsWith() :' + a.startsWith("paul")); // renvoie true
+                alert('endsWith() :' + a.endsWith("ochon")); // renvoie true
+        /* 10.slice() : extrait une chaine de caractères. La chaine de départ n'est pas modifiée. 
+        On fournit obligatoirement la position de départ et optionnellement, en deuxième argument, la position où
+        l'extraction doit s'arrêter. Si on donne des valeurs négatives, la recherche commence par la fin.
+        */
+                var a = "j'aime javascript au petit déjeuner seulement";
+                alert('slice() :' + a.slice(7,17)); // renvoie "javascript"
+       //   11. replace(): recherche une expression dans une chaine de caractères et la remplace par une autre
+                var a = "j'aime javascript au petit déjeuner seulement";
+                alert('replace() :' + a.replace("petit déjeuner","diner")); // renvoie "j'aime javascript au diner seulement"
+        //  12. trim(): supprime les espaces dans la chaine de caractères
+                var a = "la fin des temps";
+                alert('trim() :' + a.trim()); 
+                alert(a);
+    </script>
+</body>
+</html>
