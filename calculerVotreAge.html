@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        input{
+            /* position fixe absolue*/
+            position: absolute;
+            left: 200px;
+            /* famille de police */
+            font-family: sans-serif;
+            /* taille du caractère */
+            font-size: 12px;
+            width: 160px;
+        }
+        label{
+            /* position gauche */
+            left: 4px;
+            /* famille de police*/
+            font-family: sans-serif;
+            /* taille du caractère*/
+            font-size: 12px;
+        }
+        input[type = button]{
+            position: absolute;
+            /* positon gauche */
+            top: 80px;
+            left: 30px;
+            font-size: 12px;
+        }
+    </style>
+    <script>
+        /*
+
+            Auteur : Magne MATANGOU
+            Date :  10/03/2023
+            Cour: manipulation des dates.
+
+            il faut bien noter que la gestion des dates est un vrai casse tête dans javascript. 
+            En effet,le langage est susceptible d'être utlisé dans différents pays avec différents fuseaux horaires. 
+            La manipulation des jours, des mois, des années et la réalisatiopn des calculs entre eux n'est pas très simple.
+            Pour calculer sans problème avec les dates issues de pays et de fuseaux horaires diiférents, on transforme les dates en millisecondes,
+            on fait les calculs puis on retransforme les millisecondes en jours, en mois ou en années.
+            Plusieurs méthodes sont disponibles pour cette gestion très particulières des dates.
+
+            voici un exemple simple de manipulation des dates. 
+            Il s'agit de calculer l'age de la personne qui saisit sa date de naissance.
+
+        */
+        function age(MF){
+        // j'extrais l'année de la date du jour
+            var annee_dujour = new Date().getFullYear();
+        // j'extrais la valeur saisie dans le formulaire
+            var D1 = document.MF.madate.value;
+        // j'extrais les 4 premiers caractères de la date
+            annee_naissance = D1.substr(0,4);
+        // je fais la différence entre les deux valeurs
+            age = annee_dujour - annee_naissance-1;
+        // je place l'age dans la zone
+            document.MF.res.value = age;
+        }
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h5>Calcul de votre age</h5>
+    <form name="MF">
+        <label>Entrez votre date de naissance : </label>
+        <input type="text" name="madate" value="1993-07-04"><br>
+        <input type="text" name="res"><br>
+        <input type="button" value="Calculer" onclick="age(MF)">
+    </form>
+</body>
+</html>
