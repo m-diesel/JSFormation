@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script>
+        /*
+
+        Auteur : Magne MATANGOU
+        Date :  10/03/2023
+        Cour: La méthode parseFloat.
+
+    */
+        function depart(){
+            //je renseigne le taux TVA dans la zone
+            document.getElementById("taux").value=0.2;
+        }
+        function test(){
+        
+            //je replace le curseur dans le champ ht
+            document.getElementById("ht").focus();
+            //je récupère la valeur du champs ht que je transforme en numériue
+            var vht = parseFloat(document.getElementById("ht").value);
+            //je récupère le contenu du taux que je transforme en numérique
+            vtaux =parseFloat(document.getElementById("taux").value);
+            //je calcule le TTC
+            var vttc = vht*(vtaux + 1);
+            // je place la valeur dans la zone
+            document.getElementById("ttc").value=vttc;
+        }
+        /*
+        Enoncé de l'exercice
+        Des l'ouverture dela page, le champ taux de TVA doit automatiquement être 
+        rempli par la valeur en cours, soit 20%. C'est l'évènement onload qui va être utlisé. 
+        Dès que le pointeur arrive dans le chmap TTC, un calcul doit être effectué. 
+        C'est l'évènement onfocus qui va être utilisé.
+        NB:
+        1. La formule du TTC esrt égale à HT*(1+taux).
+        2. attention : lorsqu'on récupère la valeur dans un champ, il est toujours de type chaine
+           de caractères (string) et non pas numérique, même s le type de la balise input est number.
+           Par conséquent, il faut employer l'expression parseFloat pour transformer le champ en numérique.
+           N'oubliez pas la lettre F en majuscules. javascript est extrêmement sensible à la casse.
+
+        */
+    </script>
+    <title>Calcul des TTC</title>
+</head>
+<body onload="depart()">
+    <label>Entrez la valeur du hors taxe</label><br>
+    <input type="number" id="ht" value="100"><br>
+    <label>Entrez le taux de la tva</label><br>
+    <input type="number" id="taux"><br>
+    <label>La valeur du ttc est</label><br>
+    <input type="number" id="ttc" onfocus="test()"><br><br>
+</body>
+
+</html>
