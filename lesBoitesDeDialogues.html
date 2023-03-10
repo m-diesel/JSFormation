@@ -5,13 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
-        var person = prompt("Entrez votre nom","émile borneàvélocédur");
-        if(person == null || person ==""){
-            alert("opération annulée");
-        }
-        else{
-            alert("le nom a " + person.length + " caractères")
-        }
+       if(confirm("voulez-voud fermer le navigateur? ")){
+        window.close();
+       }else{
+        alert("continuez votre travail ! ");
+       }
     </script>
     <title>Document</title>
 </head>
